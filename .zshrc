@@ -25,6 +25,7 @@ zplug "lib/compfix", from:oh-my-zsh, defer:0
 zplug "lib/clipboard", from:oh-my-zsh, defer:0
 zplug "lib/directories", from:oh-my-zsh, defer:0
 zplug "lib/grep", from:oh-my-zsh, defer:0
+zplug "lib/key-bindings", from:oh-my-zsh, defer:0
 zplug "lib/misc", from:oh-my-zsh, defer:0
 zplug "lib/termsupport", from:oh-my-zsh, defer:0
 
