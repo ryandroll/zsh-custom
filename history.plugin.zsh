@@ -14,6 +14,10 @@ case $HIST_STAMPS in
   *) alias history='fc -l 1' ;;
 esac
 
+## Try to remove error histroy
+# according to https://www.zsh.org/mla/users/2014/msg00720.html
+#zshaddhistory() {  whence ${${(z)1}[1]} >/dev/null || return 2 }
+
 setopt append_history
 setopt extended_history
 setopt hist_expire_dups_first
