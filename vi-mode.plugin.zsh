@@ -1,4 +1,5 @@
 ## Modifed by oh-my-zsh/plugins/vi-mode for working with powerlevel9k
+# based on https://github.com/bhilburn/powerlevel9k/issues/319
 
 # Updates editor information when the keymap changes.
 function zle-line-init {
