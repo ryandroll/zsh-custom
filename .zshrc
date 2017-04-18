@@ -36,7 +36,6 @@ zplug "plugins/git", from:oh-my-zsh
 #zplug "plugins/tmux", from:oh-my-zsh
 
 ## Add plugins: OS specific
-zplug "plugins/brew", from:oh-my-zsh #, if:"which brew"
 zplug "plugins/osx", from:oh-my-zsh #, if:"which brew"
 #zplug "plugins/archlinux", from:oh-my-zsh #, if:"which pacman"
 #zplug "plugins/systemd", from:oh-my-zsh #, if:"which systemctl"
