@@ -21,8 +21,9 @@ source ~/.zplug/init.zsh
 
 ## Add oh-my-zsh lib, should be load first
 #zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh", defer:0 # using total
-zplug "lib/compfix", from:oh-my-zsh, defer:0
 zplug "lib/clipboard", from:oh-my-zsh, defer:0
+zplug "lib/compfix", from:oh-my-zsh, defer:0
+zplug "lib/completion", from:oh-my-zsh, defer:0
 zplug "lib/directories", from:oh-my-zsh, defer:0
 zplug "lib/grep", from:oh-my-zsh, defer:0
 zplug "lib/key-bindings", from:oh-my-zsh, defer:0
