@@ -63,7 +63,7 @@ zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme, defer:0
 # Customize settings
 zplug "ryandroll/zsh-custom", use:history.zsh
 zplug "ryandroll/zsh-custom", use:powerlevel9k-custom.zsh
-zplug "ryandroll/zsh-custom", use:vi-mode.plugin.zsh
+zplug "ryandroll/zsh-custom", use:vi-mode.plugin.zsh, defer:1
 
 ### Install packages that have not been installed yet
 ## Don't routine check for faster loading
