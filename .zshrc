@@ -1,10 +1,16 @@
+#################### Installation guide for zplug ####################
+### Just copy the .zshrc file in your home folder
+## First time you need search below "zplug check || zplug install"
+## Uncomment it for initial install 
+## And it will install zplug and all plugins !!!
+
 ### Reference:
 ## https://github.com/pecigonzalo/dotFiles/blob/master/.zshrc
 ## https://github.com/jimmidyson/dotfiles/blob/master/.zshrc
 ## http://qiita.com/scalper/items/ed83c24f568cbf7f132b
 
-### test for zsh loading time
-# for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done
+### Test for zsh loading time
+## for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done
 
 #################### Start of zplug setup ####################
 ### Check if zplug is installed and install all plugins first time
@@ -74,5 +80,5 @@ zplug "ryandroll/zsh-custom", use:vi-mode.plugin.zsh, defer:1
 ### Load plugins
 zplug load
 
-#################### End of zplug setup ####################
+#################### Other Tweak ####################
 ## Add commands to $PATH
