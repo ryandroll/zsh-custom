@@ -77,8 +77,7 @@ zplug "ryandroll/zsh-custom", use:vi-mode.plugin.zsh, defer:1
 ## Uncomment the next line next time if install any uninstalled plugins
 ## zplug check || zplug install
 
+### Add commands to $PATH
+
 ### Load plugins
 zplug load
-
-#################### Other Tweak ####################
-## Add commands to $PATH
