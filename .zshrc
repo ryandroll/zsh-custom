@@ -78,6 +78,8 @@ zplug "ryandroll/zsh-custom", use:vi-mode.plugin.zsh, defer:1
 ## zplug check || zplug install
 
 ### Add commands to $PATH
+## homebrew PATH
+export PATH=/usr/local/bin:$PATH
 
 ### Load plugins
 zplug load
