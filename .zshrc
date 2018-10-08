@@ -14,11 +14,12 @@
 
 #################### Start of zplug setup ####################
 ### Check if zplug is installed and install all plugins first time
-## The best way to install and don't delay loading to much
+## Look strange & hack, but this is the best way to install 
+## because don't delay loading to much
 ## Reinstall zplug by deleted ~/.zplug folder
 [[ -d ~/.zplug ]] || {
     git clone https://github.com/zplug/zplug ~/.zplug
-    source ~/.zplug/init.zsh && zplug update --self
+    source ~/.zplug/init.zsh && zplug update
     . ~/.zshrc && zplug install && zplug clear
 }
 
