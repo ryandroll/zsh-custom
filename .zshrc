@@ -82,5 +82,8 @@ zplug "ryandroll/zsh-custom", use:vi-mode.plugin.zsh, defer:1
 ## homebrew PATH
 export PATH=/usr/local/bin:$PATH
 
+## homebrew anaconda PATH
+export PATH="/usr/local/anaconda3/bin:$PATH"
+
 ### Load plugins
 zplug load
