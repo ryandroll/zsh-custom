@@ -36,6 +36,7 @@ zplug "lib/directories", from:oh-my-zsh, defer:0
 zplug "lib/grep", from:oh-my-zsh, defer:0
 zplug "lib/key-bindings", from:oh-my-zsh, defer:0
 zplug "lib/misc", from:oh-my-zsh, defer:0
+zplug "lib/functions", from:oh-my-zsh, defer:0
 zplug "lib/termsupport", from:oh-my-zsh, defer:0
 
 ### Add plugins: Aliases, completions
@@ -45,7 +46,7 @@ zplug "plugins/git", from:oh-my-zsh
 #zplug "plugins/tmux", from:oh-my-zsh
 
 ### Add plugins: OS specific
-zplug "plugins/osx", from:oh-my-zsh #, if:"which brew"
+#zplug "plugins/osx", from:oh-my-zsh #, if:"which brew"
 #zplug "plugins/archlinux", from:oh-my-zsh #, if:"which pacman"
 #zplug "plugins/systemd", from:oh-my-zsh #, if:"which systemctl"
 #zplug "plugins/ubuntu",   from:oh-my-zsh #, if:"which apt"
@@ -80,10 +81,10 @@ zplug "ryandroll/zsh-custom", use:vi-mode.plugin.zsh, defer:1
 
 ### Add commands to $PATH
 ## homebrew PATH
-export PATH=/usr/local/bin:$PATH
+#export PATH=/usr/local/bin:$PATH
 
-## homebrew anaconda PATH
-export PATH="/usr/local/anaconda3/bin:$PATH"
+## mambaforge PATH
+#export PATH="/opt/mambaforge/bin:$PATH"
 
 ### Load plugins
 zplug load
