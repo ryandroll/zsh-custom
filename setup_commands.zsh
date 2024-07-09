@@ -7,7 +7,7 @@ if (( $+commands[zoxide] )); then
     eval "$(zoxide init zsh)"
     
     # _ZO_FZF_OPTS: Options for customizing fzf's behavior in zoxide
-    export _ZO_FZF_OPTS="--scheme=path --tiebreak=end,chunk,index --bind=ctrl-z:ignore,btab:up,tab:down --cycle --keep-right --border=sharp --height=45% --info=inline --layout=reverse --tabstop=1 --exit-0 --select-1 --preview '(eza --tree --icons --level 3 --color=always --group-directories-first {2} || tree -NC {2} || ls --color=always --group-directories-first {2}) 2>/dev/null | head -200'"
+    export _ZO_FZF_OPTS="--scheme=path --tiebreak=end,chunk,index --bind=ctrl-z:ignore,btab:up,tab:down --cycle --keep-right --border=sharp --height=50% --min-height 10 --info=inline --layout=reverse --tabstop=1 --exit-0 --select-1 --preview '(eza --tree --icons --level 3 --color=always --group-directories-first {2} || tree -NC {2} || ls --color=always --group-directories-first {2}) 2>/dev/null | head -200'"
 fi
 
 # FZF: fuzzy finderls
@@ -35,7 +35,7 @@ if (( $+commands[fzf] )); then
     export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
     
     # FZF_DEFAULT_OPTS: General options to customize fzf's behavior
-    export FZF_DEFAULT_OPTS='--height 40% --border'
+    export FZF_DEFAULT_OPTS='--height 50% --min-height 10 --border'
     
     # FZF_CTRL_T_OPTS: Options for fzf when invoked with Ctrl+T
     export FZF_CTRL_T_OPTS="--preview '(bat --style=numbers --color=always {} || cat {} || tree -NC {}) 2>/dev/null | head -200'"
