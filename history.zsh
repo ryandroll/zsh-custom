@@ -12,8 +12,8 @@ zshaddhistory() {
   # Get the currently entered command
   local command=${1%% *}
 
-  # Use 'which' to check if the command exists in the current environment
-  if which $command > /dev/null 2>&1; then
+  # Use 'type' to check if the command exists in the current environment, including aliases
+  if type $command > /dev/null 2>&1; then
     # Return 0 to allow adding the command to history
     return 0
   else
