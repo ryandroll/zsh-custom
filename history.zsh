@@ -7,20 +7,32 @@ fi
 HISTSIZE=100000
 SAVEHIST=100000
 
-# Function to filter commands before adding them to history
-zshaddhistory() {
-  # Get the currently entered command
-  local command=${1%% *}
+# Define a function to filter the history file
+function filter_history() {
+  local histfile="$HOME/.zsh_history"
+  local temp_hist=$(mktemp)
+  local valid_hist=$(mktemp)
 
-  # Use 'type' to check if the command exists in the current environment, including aliases
-  if type $command > /dev/null 2>&1; then
-    # Return 0 to allow adding the command to history
-    return 0
-  else
-    # Return 1 to prevent adding the command to history
-    return 1
-  fi
+  # Copy the current history to a temporary file
+  cp $histfile $temp_hist
+
+  # Filter valid commands and aliases
+  while IFS= read -r line; do
+    local command=$(echo $line | sed 's/^[^;]*;//')
+    if builtin command -v ${command%% *} > /dev/null 2>&1; then
+      echo "$line" >> $valid_hist
+    fi
+  done < $temp_hist
+
+  # Replace the original history file with the filtered valid history
+  mv $valid_hist $histfile
+
+  # Remove the temporary files
+  rm $temp_hist
 }
+
+# Filter history on Zsh startup
+filter_history
 
 # Append history to the history file instead of overwriting it
 setopt append_history
