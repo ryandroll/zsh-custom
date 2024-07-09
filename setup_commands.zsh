@@ -35,7 +35,7 @@ if (( $+commands[fzf] )); then
     export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
     
     # FZF_DEFAULT_OPTS: General options to customize fzf's behavior
-    export FZF_DEFAULT_OPTS='--height 50% --min-height 10 --border'
+    export FZF_DEFAULT_OPTS='--height 50% --min-height 10 --reverse'
     
     # FZF_CTRL_T_OPTS: Options for fzf when invoked with Ctrl+T
     export FZF_CTRL_T_OPTS="--preview '(bat --style=numbers --color=always {} || cat {} || tree -NC {}) 2>/dev/null | head -200'"
