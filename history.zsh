@@ -65,7 +65,7 @@ setopt always_to_end
 setopt hash_list_all
 
 # Allow completion for aliases
-setopt completealiases
+# setopt completealiases
 
 # Allow completion from within a word/phrase
 setopt complete_in_word
