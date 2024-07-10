@@ -48,7 +48,7 @@ if (( $+commands[fzf] )); then
 fi
 
 # Mambaforge
-if [ -f /opt/mambaforge/bin/conda ]; then
+if ❯ (( $+commands[/opt/mambaforge/bin/conda] )); then
       __conda_setup="$('/opt/mambaforge/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
       if [ $? -eq 0 ]; then
       eval "$__conda_setup"
