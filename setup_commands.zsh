@@ -54,7 +54,7 @@ if (( $+commands[micromamba] )); then
     export MAMBA_ROOT_PREFIX='/opt/micromamba'
 
     # Setup micromamba shell integration
-    __mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+    __mamba_setup="$("$MAMBA_EXE" shell hook --shell bash --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
     if [ $? -eq 0 ]; then
         eval "$__mamba_setup"
     else
